@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://static.thenounproject.com/png/37118-200.png"/>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+    body{
+        background: linear-gradient(-260deg,rgb(254, 45, 254),blue);
+    }
+    .barnav{  
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.barnav a:hover{
+  background: linear-gradient(to right,pink,yellow);
+  border-radius: 55%;
+  box-shadow: 0 0 2px #03e914,0 0 15px #03e914,0 0 25px #03e914;
+  color:red;
+}
+.barnav a{
+ color: #03e914;
+ text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  cursor:pointer; 
+}
+    h1{
+        background: linear-gradient(
+        to right,
+         rgb(95, 211, 95) 10%,
+        yellow 60%,
+        rgb(5, 245, 5) 80%
+        
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    background-size: 200% auto;
+    animation: textShine 5s  linear infinite ;
+        font-size: 55px;
+    }
+    @keyframes textShine {
+    to{
+      background-position: 200% center;
+    }
+}
+
+p{
+    color: white;
+    font-size: 25px;
+}
+    span{
+        font-size: 35px;
+    }
+    .photo{
+        display: grid;
+    }
+    .gear{
+        background: transparent;
+        height: 250px;
+        padding-left: 35px;
+    }
+    .patience{
+        height: 250px;
+        padding-left: 950px;
+    }
+    .light{
+        height: 250px;
+        padding-left: 35px;
+    }
+    .loc{
+        height: 250px;
+        padding-left: 950px;
+    }
+</style>
+<body>
+    <div class="barnav">
+        <a href="pro.html" ><b>HOME</b></a>
+        <a href="gallery.html" ><b>GALLERY</b></a>
+        <a href="categories.html" ><b>BIRDS-DETAILS</b></a>
+        <a href="login.html" ><b>LOGIN</b></a>  
+      </div>
+    <div class="photo">
+       <center> <h1>Bird Photography Tips</h1></center>
+       
+        <div class="gear">
+        <i class="fa-solid fa-camera"></i><br>
+        <span>Gear</span>
+        <p>Use a telephoto lens and a sturdy tripod for the best bird Photography results.
+            Lorem <br> ipsum dolor sit amet consectetur adipisicing elit. Tenetur consectetur architecto tempore <br> corporis consequatur  nobis non illum rem, dicta quia? Repellat doloremque  nam <br> molestias numquam odit aliquid perferendis quam veniam.
+        </p>
+            
+    </div>
+        <div class="patience">
+            <i class="fa-solid fa-eye"></i><i class="fa-solid fa-eye"></i><br>
+            <span>Patience</span>
+            <p>Spend time observing and understanding bird behaviour to capture the prefect moment.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore quae odit eum totam illo aspernatur reiciendis, tempora voluptate in harum quis fugiat accusamus voluptatibus nihil cupiditate? Eum, repellendus repudiandae.
+            </p>
+        </div>
+        <div class="light">
+            <i class="fa-solid fa-sun"></i><br>
+            <span>Lighting</span>
+            <p>Shoot in the early morning or late afternoon for the best natural lighting.
+                Lorem ipsum <br> dolor sit amet consectetur, adipisicing elit. Maxime, minima. Nisi nobis tempora eaque <br> ex animi, eum vero? Et eos consectetur ipsum vero tempore? A tenetur fugit eos fugiat odit?
+            </p>
+        </div>
+        <div class="loc"> 
+            <i class="fa-solid fa-location-crosshairs"></i><br>
+            <span>Location</span>
+            <p>Scout out bird-friendly habitats and feeders to find the most photogenic subjects.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, distinctio voluptatibus. Inventore voluptas, aut nam obcaecati commodi quasi cum harum earum exercitationem, quisquam adipisci dolorum repudiandae quibusdam provident autem natus.
+            </p>
+            </div>
+       </div>
+    
+</body>
+</html>

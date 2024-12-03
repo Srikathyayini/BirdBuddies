@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Care Shop</title>
+</head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background: #4CAF50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+    
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .product {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .price {
+        font-weight: bold;
+        color: #4CAF50;
+    }
+    
+    button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    button:hover {
+        background: #45a049;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        margin-top: 20px;
+    }
+    
+</style>
+<body>
+    <header>
+        <h1>Bird Care Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/a8d18616-5694-4961-8e8f-10dafe84b15d.__CR0,0,300,300_PT0_SX300_V1___.jpg" alt="Bird Food">
+                    <h3>Premium Bird Food</h3>
+                    <p>High-quality seeds and pellets for your feathered friends.</p>
+                    <p class="price">$9.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.jiomart.com/images/product/original/rvlzfdsyf3/boltz-bird-ladder-and-hanging-chewable-wooden-toys-for-budgies-cockatiel-birds-2-pcs-product-images-orvlzfdsyf3-p590989284-0-202201071049.jpg?im=Resize=(420,420)" alt="Bird Toys">
+                    <h3>Colorful Bird Toys</h3>
+                    <p>Fun toys to keep your birds entertained and active.</p>
+                    <p class="price">$5.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.jiomart.com/images/product/original/rvizj7wznl/bird-cage-for-budgies-love-birds-small-birds-cage-paravai-koondu-2perch-2cups-blue-product-images-orvizj7wznl-p594762612-0-202210220222.jpg?im=Resize=(420,420)" alt="Bird Cage">
+                    <h3>Spacious Bird Cage</h3>
+                    <p>A comfortable and safe home for your birds.</p>
+                    <p class="price">$79.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://plantlane.com/cdn/shop/products/7103EH8y5BL._SL1500_88155283-6b2c-4fd8-972b-64f2cdba7489.jpg?v=1681941144" alt="Bird Bath">
+                    <h3>Outdoor Bird Bath</h3>
+                    <p>A stylish bath for your birds to enjoy and cool off.</p>
+                    <p class="price">$39.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/812zEZqwkpL._AC_UL210_SR210,210_.jpg" alt="Bird Perch">
+                    <h3>Natural Wood Bird Perch</h3>
+                    <p>Provide a comfortable resting place for your birds.</p>
+                    <p class="price">$12.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.jiomart.com/images/product/original/rvojljqper/vetenex-bird-electro-plus-birds-electrolyte-for-dehydration-stress-loose-motion-100-ml-product-images-orvojljqper-p596897889-0-202301031549.jpg?im=Resize=(420,420)" alt="Bird Health Supplement">
+                    <h3>Bird Health Supplement</h3>
+                    <p>Essential vitamins and minerals for a healthy bird.</p>
+                    <p class="price">$15.99</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best products for your beloved birds. Our mission is to ensure that every bird has a happy and healthy life.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: contact@birdcareshop.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bird Care Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

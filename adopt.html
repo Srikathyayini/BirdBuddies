@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Buddies - Adoption</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f8ff;
+        color: #333;
+      }
+      header {
+        background-color: #4682b4;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background:linear-gradient(to right,white,grey,black) ;
+        padding: 20px;
+      }
+      nav .log{
+        width: 62px;
+        height: 45px;
+      }
+      nav .logo {
+        font-size: 1.5em;
+        color: #0e0d0d;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+      
+      nav ul li {
+        display: inline;
+      }
+      
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      
+      nav ul li a:hover {
+        color: #ebf1ec;
+      }
+      .donate-btn {
+        background-color: #ffcc00;
+        color: #f4f2f2;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .donate-btn:hover {
+          background-color: #e0a800;
+      }
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+      .bird-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2em;
+      }
+      .bird-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+      .bird-card:hover {
+        transform: translateY(-5px);
+      }
+      .bird-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .bird-info {
+        padding: 1em;
+      }
+      .adopt-button {
+        display: block;
+        background-color: #4682b4;
+        color: white;
+        text-align: center;
+        padding: 0.5em;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .adopt-button:hover {
+        background-color: #357ab7;
+      }
+      #adoption-form {
+        display: none;
+        background-color: white;
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-top: 2em;
+      }
+      #adoption-form h2 {
+        margin-top: 0;
+      }
+      #adoption-form form {
+        display: grid;
+        gap: 1em;
+      }
+      #adoption-form input, #adoption-form textarea {
+        width: 100%;
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      #adoption-form button {
+        background-color: #4682b4;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      #adoption-form button:hover {
+        background-color: #357ab7;
+      }
+    </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo"><img class="log" src="https://static.thenounproject.com/png/37118-200.png"/>BirdBuddies</div>
+            <ul>
+                <li><a href="birds.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate</a></li>
+            </ul>
+        </nav>
+      
+      <main>
+        <h2>Birds Available for Adoption</h2>
+        <p>Meet our feathered friends looking for their forever homes. Click on a bird to learn more and start the adoption process!</p>
+        
+        <div class="bird-grid">
+          <div class="bird-card">
+            <img src="https://media.istockphoto.com/id/1281328012/photo/blue-ring-necked-parakeet-perched-on-a-branch.jpg?s=612x612&w=0&k=20&c=o-LQMGQ2a3OTrVFIUrVUhgLStfgtJgGP_7HPZyV8kU0=" alt="Blue parakeet perched on a branch" class="bird-image" width="250" height="200">
+            <div class="bird-info">
+              <h3>Sky</h3>
+              <p>Species: Parakeet</p>
+              <p>Age: 2 years</p>
+              <a href="#" class="adopt-button" data-bird="Sky">Adopt Sky</a>
+            </div>
+          </div>
+          
+          <div class="bird-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtfl_pkrCLXoa0Iua-vwC1-Ib5JiCskzuxYBewS5Ncv5I3LtvMVnqZTgAsASKMHROvE8&usqp=CAU" alt="Gray cockatiel with yellow crest" class="bird-image" width="250" height="200">
+            <div class="bird-info">
+              <h3>Sunny</h3>
+              <p>Species: Cockatiel</p>
+              <p>Age: 1 year</p>
+              <a href="#" class="adopt-button" data-bird="Sunny">Adopt Sunny</a>
+            </div>
+          </div>
+          
+          <div class="bird-card">
+            <img src="https://www.mediastorehouse.com/p/164/fischers-peach-faced-lovebirds-hybrid-14172562.jpg.webp" alt="Colorful lovebird with green and pink feathers" class="bird-image" width="250" height="200">
+            <div class="bird-info">
+              <h3>Rainbow</h3>
+              <p>Species: Lovebird</p>
+              <p>Age: 3 years</p>
+              <a href="#" class="adopt-button" data-bird="Rainbow">Adopt Rainbow</a>
+            </div>
+          </div>
+          
+          <div class="bird-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7epoM5rSxROlWbIwtPt9Zr3lRULNmFFowg&s" alt="Yellow canary singing on a perch" class="bird-image" width="250" height="200">
+            <div class="bird-info">
+              <h3>Melody</h3>
+              <p>Species: Canary</p>
+              <p>Age: 1.5 years</p>
+              <a href="#" class="adopt-button" data-bird="Melody">Adopt Melody</a>
+            </div>
+          </div>
+          <div class="bird-card">
+            <img src="https://static.toiimg.com/thumb/msid-106263492,imgsize-60122,width-900,height-1200,resizemode-6/106263492.jpg" alt="Yellow canary singing on a perch" class="bird-image" width="250" height="200">
+            <div class="bird-info">
+              <h3>Parrot</h3>
+              <p>Species: Parrot</p>
+              <p>Age: 2 years</p>
+              <a href="#" class="adopt-button" data-bird="Parrot">Adopt Parrot</a>
+            </div>
+          </div>
+          <div class="bird-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7epoM5rSxROlWbIwtPt9Zr3lRULNmFFowg&s" alt="Yellow canary singing on a perch" class="bird-image" width="250" height="200">
+            <div class="bird-info">
+              <h3>Melody</h3>
+              <p>Species: Canary</p>
+              <p>Age: 1.5 years</p>
+              <a href="#" class="adopt-button" data-bird="Melody">Adopt Melody</a>
+            </div>
+          </div>
+          <div class="bird-card">
+            <img src="" alt="">
+            <div class="bird-info">
+                <h3>                </h3>
+                <p>Species: </p>
+                <p>Age: 3years</p>
+                <a href="#" class="adopt-button" data-bird="">Adopt </a>
+            </div>
+          </div>
+        </div>
+        
+        <div id="adoption-form">
+          <h2>Adoption Application</h2>
+          <form id="bird-adoption-form">
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+            <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+            <input type="text" id="address" name="address" required placeholder="Your Address">
+            <input type="text" id="selected-bird" name="selected-bird" readonly>
+            <textarea id="experience" name="experience" required placeholder="Tell us about your experience with birds"></textarea>
+            <button type="submit">Submit Application</button>
+          </form>
+        </div>
+      </main>
+      
+      <footer>
+        <p>&copy; 2024 Bird Buddies. All rights reserved.</p>
+      </footer>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const adoptButtons = document.querySelectorAll('.adopt-button');
+          const adoptionForm = document.getElementById('adoption-form');
+          const selectedBirdInput = document.getElementById('selected-bird');
+          const birdAdoptionForm = document.getElementById('bird-adoption-form');
+    
+          adoptButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+              e.preventDefault();
+              const birdName = this.getAttribute('data-bird');
+              selectedBirdInput.value = birdName;
+              adoptionForm.style.display = 'block';
+              adoptionForm.scrollIntoView({ behavior: 'smooth' });
+            });
+          });
+    
+          birdAdoptionForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will contact you soon about adopting ' + selectedBirdInput.value + '.');
+            this.reset();
+            adoptionForm.style.display = 'none';
+          });
+        });
+      </script>
+    </body>
+    </html>

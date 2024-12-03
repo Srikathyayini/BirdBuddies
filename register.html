@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        
+        body{
+       background: url("https://static.vecteezy.com/system/resources/previews/004/941/847/original/cosmetic-background-for-product-branding-and-packaging-presentation-geometry-form-circle-molding-on-podium-stage-with-shadow-of-leaf-background-design-eps10-vector.jpg");
+       
+       background-size: cover;
+        background-repeat: no-repeat; 
+        margin: 75px;
+       padding: 0;
+       }
+       h1{
+        color: #ddd;
+       }
+    .regst{
+      
+    width: 420px;
+    box-shadow: 0  5px 5px   rgb(223, 219, 219);
+    color: rgb(249, 249, 249);
+    border-radius: 30px;
+    padding: 50px;
+    }   
+    label{
+       font-size: 20px;
+       color: rgb(250, 247, 247);   
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    input[type=text],input[type=password],input[type=name],input[type=email]{
+        background-color: #ddd;
+        outline: none;
+        border-radius: 15px;
+        height: 5px;
+        width:375px;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+    }
+
+    input[type=radio]{
+        width: 130px;
+        height: 15px;
+        padding: 0%;
+       
+    }
+    textarea{
+        width: 385px;
+        border-radius: 15px;
+        font-size: 18px;
+    }
+    input[type=date]{
+        background-color: #f3b3b3;
+        width: 395px;
+        height: 35px;
+        border-radius: 15px;
+    }
+    .btn,.rtn{
+        height: 55px;
+        width:100%;
+        border-radius: 15px;
+       background-color: rgb(8, 251, 255);
+       font-size: 18px;
+    }
+.btn:hover{
+    background: rgb(255, 141, 198);
+    box-shadow: yellowgreen;
+}
+    .rtn:hover{
+    background: rgb(249, 155, 202);
+}
+ 
+.count{
+    padding-left: 155px;
+}
+.cou{
+    padding-left: 30px;
+}
+.state{
+    width: 190px;
+    height: 30px;
+    background-color: #ddd;
+}
+.country{
+    background-color: #ddd;
+    height: 30px;
+    width: 190px;
+}
+    </style>
+</head>
+<body>
+   <center>
+    <form action="" id="regform">
+        <center><h1>REGISTRATION FORM</h1></center>
+        <div id="regstForm" class="regst">
+            <label>UserName</label><br>
+            <input type="text" id="un" name="uname" placeholder="Enter username"><br>
+           
+            <label>Gender</label><br>
+          <input type="radio" name="gr" value="M"  /><b>Male</b> 
+            <input type="radio" name="gr" value="F"/><b>Female</b> <br> 
+           <br> 
+          
+             <label>Email</label><br>
+            <input type="email" name="email" placeholder="email" ><br>
+            <label>Password</label><br>
+            <input type="password" id="pw" name="password" placeholder="Enter password" ><br>
+            <label>ConfirmPassword</label><br>
+            <input type="password" id="cpw" name="cpassword" placeholder="Enter password"><br>
+            <br>
+            <br><input type="submit" onclick="redform()"
+                class="btn" id="btn" value="login" name="lb">&nbsp;
+            <input type="reset" class="rtn" value="Reset" name="rb">
+        </div>
+           </form></center>
+        
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+            var username = document.getElementById("un").value;
+            var password = document.getElementById("pw").value;
+    
+            // Simple validation check
+            if (username && password) {
+                alert("Thank you for registering!!");
+                // Optionally, redirect to another page (example: birds.html)
+                window.location.href = "login.html";
+            } else {
+                alert("Please fill in both fields.");
+            }
+        });
+    </script>
+</body>
+</html>

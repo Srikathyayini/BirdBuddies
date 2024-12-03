@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widt, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    *{
+        margin: 1rem ;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: url("https://images.blocksurvey.io/cdn-cgi/imagedelivery/G6cPOuGZ4Z_bEV13gBxixw/templates/concert-registration-form.svg/l");
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+
+    }
+   
+    .form{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+    height: 350px;
+    width: 405px;
+    background:transparent;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 20%;
+    backdrop-filter: blur(10px);
+    border: 9px dotted #8679d1; 
+    padding: 25px;
+  animation: border-pulse 2s infinite;
+    }
+    @keyframes border-pulse {
+  0% {
+    border-color: #6f87d7; /* White */
+  }
+  25% {
+    border-color: #ff69b4; /* Pink */
+  }
+  50% {
+    border-color: #33cc33; /* Green */
+  }
+  75% {
+    border-color: #66CCCC; /* Blue */
+  }
+  100% {
+    border-color: #37b6f0; /* White */
+  }
+}
+    .btn{
+        background-color: white;
+        height: 45px;
+        width: 75%;
+        border-radius: 25px;     
+    }
+
+    input{
+            width: 90%;
+            height: 35px;
+            color: rgb(21, 20, 20);
+            background-color: rgba(255,255,255,0.07);
+            border-radius: 35px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+</style>
+<body>
+    <center>
+       
+    <div class="form">
+      <form action="" id="loginForm">
+        <h2>Login</h2>
+        Username:<input id="username" type="text"/> <br/>
+        Password:<input id="password" type="password"/> <br/> 
+        Not Registered??<a href="register.html">Sign Up Here!!</a>
+       <center><input type="submit" class="btn" value="Login" ></center></div>
+    </div></center></body>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Simple validation check
+        if (username && password) {
+            alert("Login Successfully!!");
+            // Optionally, redirect to another page (example: birds.html)
+            window.location.href = "birds.html";
+        } else {
+            alert("Please fill in both fields.");
+        }
+    });
+</script>
+</body>
+</html>

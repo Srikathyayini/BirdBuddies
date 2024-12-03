@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://static.thenounproject.com/png/37118-200.png"/>
+    <title>Contact Page</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("https://media.istockphoto.com/id/1091858450/photo/contact-us-sign-on-a-wooden-desk.jpg?s=612x612&w=0&k=20&c=Ff4enIFR2WC0QCa_CSB0RHHaNJI-t64Pa6XBuNdfux4=");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    head {
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    main {
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    .contact-form {
+        background-color: transparent;
+        border-radius: 38px;
+        padding: 40px 50px;
+        height: 100%;
+        box-shadow: 10px 10px 10px white;
+        backdrop-filter: blur(20px);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+<main>
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter message" required></textarea>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+        <div id="successMessage" style="display:none; color: green;">Successfully Completed!</div>
+    </section>
+</main>
+
+<script>
+    
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Get form values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+       
+        if (name && email && message) {
+            // Show alert message
+            alert("Thank you for contacting us, " + name + "! We will get back to you shortly.");
+
+            // Display success message after submission
+            document.getElementById("successMessage").style.display = "block";
+
+            // Optionally, you can clear the form fields after submission
+            document.getElementById("contactForm").reset();
+        } else {
+            alert("Please fill out all the fields.");
+        }
+    });
+</script>
+
+</body>
+</html>

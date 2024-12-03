@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate for Bird Adoption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 20px;
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522687303528-6c6a14d21a9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEzfHxiaXJkc3xlbnwwfHx8fDE2NDE2MTUyNDE&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .donation-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .donation-info h2 {
+            font-size: 2em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .donation-info p {
+            font-size: 1.1em;
+            color: #666;
+            margin: 10px 0 20px;
+        }
+
+        .donation-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .donation-form label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .donation-form input {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .donation-form input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        }
+
+        .donation-form button {
+            padding: 15px;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .donation-form button:hover {
+            background: linear-gradient(90deg, #45a049, #7CB342);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 128, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+        }
+        nav .log{
+            width: 62px;
+            height: 45px;
+          }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><img class="log" src="https://static.thenounproject.com/png/37118-200.png"/>BirdBuddies</div>
+        <ul>
+            <li><a href="birds.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="contact.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html" class="donate-btn">Donate</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Help Us Save Birds!</h1>
+        <p>Your donations make a difference in the lives of birds.</p>
+    </header>
+    
+    <main>
+        <section class="donation-info">
+            <h2>Make a Donation</h2>
+            <p>Your generous support helps us provide care and shelter for abandoned birds and helps us find them loving homes.</p>
+        </section>
+        
+        <form class="donation-form">
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount" required>
+            
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Your name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" placeholder="Your email" required>
+            
+            <button type="submit">Donate Now</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bird Adoption Foundation. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
